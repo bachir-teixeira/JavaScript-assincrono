@@ -1,4 +1,4 @@
-export const pedidos = [{
+const pedidos = [{
   id: 1,
   produto: "camiseta",
   categoria: "roupas",
@@ -258,18 +258,6 @@ const linguagens = [{
   },
 ];
 
-const listas = {
-  frutas,
-  animais,
-  paises,
-  cores,
-  carros,
-  desportos,
-  profissoes,
-  instrumentos,
-  dias,
-  linguagens
-};
 
 const pessoas = [{
   id: 1,
@@ -302,3 +290,16 @@ const pessoas = [{
     cidade: "Faro"
   },
 ]
+export{
+  frutas,
+  animais,
+  paises,
+  cores,
+  carros,
+  desportos,
+  profissoes,
+  instrumentos,
+  dias,
+  linguagens, 
+  pedidos
+};

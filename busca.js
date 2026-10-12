@@ -1,22 +1,17 @@
 import {
   pedidos
-} from './dados.js' // tem que importar
-
-const Dados = new Promise(resolve => resolve(pedidos))
-
-function exibir(dados) {
-  let products = document.getElementById('produto')
-  let category = document.getElementById('categoria')
-  let value = document.getElementById('valor')
-
-  let stats = document.getElementById('status')
-  // pega o primeiro pedido
-  for (let c of dados) {
-    products.innerText += `${c.produto} \n`
-    value.innerText += `${c.valor} \n`
-    category.innerText += `${c.categoria} \n`
-    stats.innerText += `${c.status} \n`
-  }
-}
-
-Dados.then(dados => exibir(dados))
+} from './banco.js' 
+const promessa = new Promise( resolve => setTimeout(() => resolve(pedidos),1000))
+function exibir(pedidos) {
+let div = document.getElementById('valores')
+  let mostrar = pedidos.map(p => {
+    return `<div id='elements'>
+    <p>${p.produto}</p> 
+    <p>${p.categoria}</p>
+    <p>${p.valor}</p>
+    <p>${p.status}</p>
+    </di>`
+  }).join('')
+  div.innerHTML = mostrar
+} 
+promessa.then( dados => exibir(dados) ) 

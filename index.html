@@ -7,48 +7,27 @@
   <title>Document</title>
 </head>
 <style>
-  body{
-     background-color:rgba(234,245,251,0.591);
-  }
-  #chaves{
-    display:flex;
-    justify-content:center;
-    background-color: white;
-    gap:30px; 
-     border-bottom:solid; 
-     
+#elements{
+  justify-content:center;
+  text-align: center; 
+  border-top:solid; 
+} 
+#ped{
+  border-bottom:solid;
+} 
+@media(min-width:700px){
+  #elements{ 
+    width: 500px;  
+    margin: 0 auto;
   } 
-  #valores{
-    background-color:rgba(227,236,246,0.591);  
-    display:flex; 
-    justify-content:center;
-    gap:30px; 
-  }
-  #corpo{
-    font-size:10px; 
-    border:solid; 
-    border-radius:8px;
-  }  
-  .produto{
-    background-color: blue;
-  }
+}
 </style>
 <body>
   <h1>PAINEL DE VENDAS </h1>
-  <div id="corpo">
-    <div id="chaves">
-      <p>produto</p>
-      <p> categoria</p>
-      <p> valores</p>
-      <p> status</p>
-    </div>
-    <div id="valores"> 
-      <p  class="p1" id="produto"></p>
-      <p class="p2" id="categoria"> </p>
-      <p class="p3" id="valor"></p>
-      <p class=" p4" id="status"></p>
-    </div>
+  <div id= "valores">   
+        carregando...
   </div>
+
   <script  type="module" src="busca.js"></script>
 </body>
 </html>
