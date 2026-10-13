@@ -1,4 +1,4 @@
-export const pedidos = [{
+const pedidos = [{
   id: 1,
   produto: "camiseta",
   categoria: "roupas",
@@ -300,5 +300,19 @@ const pessoas = [{
     nome: "Sofia Ferreira",
     idade: 31,
     cidade: "Faro"
-  },
-]
+  }]
+
+module.exports = {
+  frutas,
+  animais,
+  paises,
+  cores,
+  carros,
+  desportos,
+  profissoes,
+  instrumentos,
+  dias,
+  linguagens,
+  pedidos,
+  pessoas
+}
